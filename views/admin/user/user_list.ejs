@@ -1,0 +1,13 @@
+用户列表：从数据库查询出来
+
+<% users.forEach(function(item){ %>
+
+<ul>
+<li>username:<%= item.username %></li>
+<li>password:<%= item.password %></li>
+<li>email:<%= item.email %></li>
+<li>mobile:<%= item.mobile %></li>
+<li>create_time:<%= item.create_time %></li>
+</ul>
+
+<% })%>

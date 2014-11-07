@@ -1,0 +1,61 @@
+<% include header.ejs %>
+<div class="container">
+    <div class="row">
+        <div class="span6">
+            <ul class="nav nav-list">
+
+                <li><a href="#">产品管理</a></li>
+                <div class="nav nav-list">
+                    <li><a href="product/add" target="main">添加产品</a></li>
+                    <li><a href="#">产品列表</a></li>
+                </div>
+                <li><a href="#">用户管理</a></li>
+                <div class="nav nav-list">
+                    <li><a href="user/list" target="main">用户列表</a></li>
+                    <li><a href="#">添加用户</a></li>
+                </div>
+                <li><a href="#">系统设置</a></li>
+                <div class="nav nav-list">
+                    <li><a href="add" target="main">网站信息</a></li>
+                    <li><a href="#">联系方式</a></li>
+                </div>
+                <!--<li class="divider"></li>-->
+                <li><a href="#">Help</a></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="/javascripts/jquery-1.9.1.min.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+<script type="application/javascript">
+
+
+
+    $(document).ready(function(){
+
+        $(".nav-list div").hide();
+
+        $(".nav-list li").bind('click', function() {
+
+            if( $(this).next('div').is(":hidden"))
+            {
+                $(this).next('div:hidden').show();
+            }else
+            {
+                $(this).next('div:visible').hide();
+            }
+        });
+
+        $(".nav-list li").bind('mouseover', function() {
+            $(this).parent().children().removeClass("active");
+            $(".nav-list li").removeClass("active");
+            $(this).addClass("active");
+        });
+
+    });
+
+</script>
+</body>
+</html>
