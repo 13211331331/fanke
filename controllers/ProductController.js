@@ -21,7 +21,7 @@ module.exports.controller = function(app) {
      * 添加产品
      */
     app.get(requestMapping + '/add', function(req, res) {
-        res.render(adminPath+'/product/product_list');
+        res.render(adminPath+'/product/product_add');
     });
 
 
