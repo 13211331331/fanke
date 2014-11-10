@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="bilingual menu,中英文双语菜单" />
+<meta http-equiv="Description" content="完全用CSS实现的中英文双语导航菜单" />
+<meta content="all" name="robots" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta name="author" content="forestgan" />
+<meta name="copyright" content="forestgan" />
+<title></title>
+<style type="text/css">
+a{
+  color: #FFFF99;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+   
+#nav{
+  padding: 10px 10px 0;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 1em 0 0;
+  list-style:none;
+}
+
+#nav li{
+  float: left;
+  margin-right: 1px;
+}
+
+.bi{
+  position: relative;
+  z-index: 0;
+}
+
+.bi:hover{
+  z-index: 99;
+}
+
+.bi:hover span{
+  visibility: visible;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.bi span{
+  position: absolute;
+  left: -999em;
+  visibility: hidden;
+}
+
+#nav li a,.bi:hover span{
+  line-height: 20px;
+  text-decoration: none;
+  background: #DDDDDD;
+  color: #666666;
+  display: block;
+  width: 80px;
+  text-align: center;
+}
+
+#nav li a:hover,.bi:hover span{
+  color: #FFFFFF;
+  background: #DC4E1B;
+}
+
+.bi:hover span{
+  padding-top: 2px;
+}
+
+#navbar{
+  background: #DC4E1B;
+  height: 8px;
+  overflow: hidden;
+  clear: both;
+}
+
+</style>
+</head>
+<body styple="padding:0px;margin:0px;">
+<div id="top" styple="padding:0px;margin:0px;">
+<ul id="nav">
+    <li><a class="bi" href="index.html">Home<span>sfsf</span></a></li>
+    <li><a class="bi" href="about.html">About us<span>353</span></a></li>
+    <li><a class="bi" href="products.html">Products<span>86786</span></a></li>
+    <li><a class="bi" href="services.html">Services<span>9676576</span></a></li>
+    <li><a class="bi" href="contact.html">Contact<span>9999</span></a></li>
+  </ul>
+  <div id="navbar"></div>
+</div>
+
+
+
+
+</body>
+</html>
